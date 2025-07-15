@@ -1,30 +1,28 @@
-<<<<<<< HEAD
-=======
-# Multi-Agent Routing System
+# سیستم مسیریابی چندعاملی (Multi-Agent Routing System)
 
-![System Architecture Banner](https://via.placeholder.com/1200x400?text=Multi-Agent+System+Architecture)
+## 🚀 معرفی پروژه
+این سیستم یک پلتفرم هوشمند برای مسیریابی خودکار درخواست‌ها بین عامل‌های تخصصی است.
 
-## System Overview
+## 📌 فهرست مطالب
+- [معماری سیستم](#-معماری-سیستم)
+- [ویژگی‌ها](#-ویژگی‌ها)
+- [نصب و راه‌اندازی](#-نصب-و-راه‌اندازی)
 
-این سیستم یک پلتفرم مسیریابی هوشمند برای توزیع درخواست‌ها بین عامل‌های تخصصی است.
-
-## Architecture
+## 🏗 معماری سیستم
 
 ```mermaid
 flowchart TB
-    subgraph LangGraph Workflow
-        A[User Question] --> B(Classifier Node)
-        B -->|Math| C[MathBot]
-        B -->|Code| D[CodeBot]
-        B -->|Travel| E[TravelBot]
-        C --> F[Response Formatter]
-        D --> F
-        E --> F
-        F --> G[API Response]
+    subgraph ورودی
+    A[درخواست کاربر]
     end
-
-    subgraph Infrastructure
-        H[FastAPI] --> I[Docker]
-        I --> J[GitHub Actions]
-    end 
->>>>>>> 1a0121e74764e448d69fe25e468b571f043b3cc4
+    
+    subgraph پردازش
+    A --> B[تشخیص نوع درخواست]
+    B -->|ریاضی| C[عامل ریاضی]
+    B -->|کد| D[عامل برنامه‌نویسی]
+    end
+    
+    subgraph خروجی
+    C --> E[پاسخ نهایی]
+    D --> E
+    end
