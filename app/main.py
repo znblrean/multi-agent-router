@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.responses import JSONResponse
-from agent import ask_question
+from app.agent import ask_question  
 
 app = FastAPI()
 

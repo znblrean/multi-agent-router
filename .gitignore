@@ -1,0 +1,31 @@
+# محیط‌های مجازی
+venv/
+env/
+.venv/
+
+# کش پایتون
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+*.egg-info/
+
+# فایل‌های محیطی
+.env
+*.env
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# لاگ‌ها
+*.log
+
+# فایل‌های سیستمی
+.DS_Store
+# فایل‌های محیطی
+.env
+*.env
